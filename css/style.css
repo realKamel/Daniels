@@ -1,0 +1,245 @@
+@font-face {
+    font-family: pop-thin;
+    src: url(../fonts/Poppins/Poppins-Thin.ttf);
+}
+
+@font-face {
+    font-family: pop-extralight;
+    src: url(../fonts/Poppins/Poppins-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: pop-light;
+    src: url(../fonts/Poppins/Poppins-Light.ttf);
+}
+
+@font-face {
+    font-family: pop-regular;
+    src: url(../fonts/Poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: pop-medium;
+    src: url(../fonts/Poppins/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: pop-bold;
+    src: url(../fonts/Poppins/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: pop-extrabold;
+    src: url(../fonts/Poppins/Poppins-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: mont-regular;
+    src: url(../fonts/Montserrat/static/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: mont-bold;
+    src: url(../fonts/Montserrat/static/Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family: mont-extrabold;
+    src: url(../fonts/Montserrat/static/Montserrat-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: mont-light;
+    src: url(../fonts/Montserrat/static/Montserrat-Light.ttf);
+}
+
+@font-face {
+    font-family: mont-extralight;
+    src: url(../fonts/Montserrat/static/Montserrat-ExtraLight.ttf);
+}
+
+.pop-thin {
+    font-family: pop-thin, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.pop-extralight {
+    font-family: pop-extralight, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.pop-light {
+    font-family: pop-light, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.pop-regular {
+    font-family: pop-regular, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.pop-medium {
+    font-family: pop-medium, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.pop-bold {
+    font-family: pop-bold, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.pop-extrabold {
+    font-family: pop-extrabold, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+
+.mont-regular {
+    font-family: mont-regular, sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.mont-bold {
+    font-family: mont-bold, sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.mont-extrabold {
+    font-family: mont-extrabold, sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.mont-light {
+    font-family: mont-light, sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.mont-extralight {
+    font-family: mont-extralight, sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: mont-regular, sans-serif;
+}
+
+
+.mont {
+    font-family: "Montserrat", sans-serif;
+}
+
+.main-black {
+    color: #1c1c1c;
+}
+
+.bg-main-black {
+    background-color: #1c1c1c;
+}
+
+nav .my-toggler {
+    border: 2px solid wheat;
+    border-width: 0;
+}
+
+
+nav .nav-item a {
+    position: relative;
+}
+
+nav a.active::after {
+    content: "";
+    width: 80%;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    bottom: 7px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.header {
+    height: 100vh;
+    background-image: linear-gradient(#000000a0, #000000a0), url(../images/bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: left top;
+}
+
+.header .container .row h5 {
+    font-size: 50px;
+}
+
+.header .container .row span {
+    color: white;
+    font-size: 4rem;
+}
+
+.header .container .row span.animated {
+    font-family: mont-regular;
+}
+
+.header .container .row span.am {
+    font-family: mont-extralight;
+}
+
+.header .container .row .content .icon {
+    background-color: #00000077;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.header .container .row .content .icon i {
+    font-size: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1400px) {
+
+    .header {
+        background-position: center center;
+    }
+
+    .container-xxl,
+    .container-xl,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container {
+        max-width: 1140px;
+    }
+}
