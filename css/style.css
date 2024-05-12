@@ -58,6 +58,51 @@
     src: url(../fonts/Montserrat/static/Montserrat-ExtraLight.ttf);
 }
 
+:root {
+    --main-black: #1c1c1c;
+    --main-text-black: #343434;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: pop-regular, sans-serif;
+    font-size: 14px;
+    color: #343434;
+    font-weight: 400;
+    line-height: 1.42857143;
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: mont-regular, sans-serif;
+}
+
+p
+{
+    color:#748182
+}
+
+.main-black {
+    color: var(--main-black)
+}
+
+.main-text-black {
+    color: var(--main-text-black)
+}
+
+.bg-main-black {
+    background-color: var(--main-black)
+}
+
+
 .pop-thin {
     font-family: pop-thin, sans-serif;
     font-weight: 100;
@@ -100,7 +145,6 @@
     font-style: normal;
 }
 
-
 .mont-regular {
     font-family: mont-regular, sans-serif;
     font-optical-sizing: auto;
@@ -131,27 +175,18 @@
     font-style: normal;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: mont-regular, sans-serif;
-}
-
-
 .mont {
     font-family: "Montserrat", sans-serif;
 }
 
-.main-black {
-    color: #1c1c1c;
+.my-flex
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.bg-main-black {
-    background-color: #1c1c1c;
-}
 
 nav .my-toggler {
     border: 2px solid wheat;
@@ -174,7 +209,20 @@ nav a.active::after {
     transform: translateX(-50%);
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
+    animation-name: lineLine;
+    animation-duration: 0.5s;
 }
+
+@keyframes lineLine {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
 
 .header {
     height: 100vh;
@@ -185,33 +233,464 @@ nav a.active::after {
     background-position: left top;
 }
 
-.header .container .row h5 {
+.header .container .title h5 {
     font-size: 50px;
 }
 
-.header .container .row span {
+.header .container span {
     color: white;
     font-size: 4rem;
 }
 
-.header .container .row span.animated {
+.header .container span.animated {
     font-family: mont-regular;
 }
 
-.header .container .row span.am {
+.header .container span.am {
     font-family: mont-extralight;
 }
 
-.header .container .row .content .icon {
+.header .container .icons .icon {
     background-color: #00000077;
     border-radius: 50%;
     width: 30px;
     height: 30px;
 }
 
-.header .container .row .content .icon i {
+.header .container .icons .icon i {
     font-size: 1rem;
 }
+
+
+.about-me .container .row .caption .content {
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.about-me .container .row .description p {
+    line-height: 1.6;
+    margin: 0;
+    font-size: 15px;
+    
+}
+
+.about-me .container .row .bars .my-progress {
+    height: 100%;
+    border-radius: 5px;
+    background: #f7f7f7;
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset;
+    position: relative;
+}
+
+.about-me .container .row .bars .my-bar {
+    background-color: #1c1c1c;
+    border-radius: 5px;
+}
+
+.about-me .container .row .bars .my-bar.bar1 {
+    width: 95%;
+    animation: bar1 1s;
+}
+
+.about-me .container .row .bars .my-bar.bar2 {
+    width: 80%;
+    animation: bar2 1s;
+
+}
+
+.about-me .container .row .bars .my-bar.bar3 {
+    width: 90%;
+    animation: bar3 1s;
+
+}
+
+@keyframes bar1 {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 95%;
+    }
+}
+
+@keyframes bar2 {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
+@keyframes bar3 {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+.about-me .container .row .my-btns .my-btn {
+    margin-top: 20px;
+    padding: 10px 30px;
+    border: 1px solid #1c1c1c;
+    border-radius: 5px;
+    font-size: 13px;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.about-me .container .row .my-btns .my-btn.btn1 {
+    color: white;
+    background-color: var(--main-black);
+}
+
+.about-me .container .row .my-btns .my-btn.btn1:hover {
+    background-color: transparent;
+    color: var(--main-text-black);
+}
+
+.about-me .container .row .my-btns .my-btn.btn2 {
+    color: var(--main-text-black)
+}
+
+.about-me .container .row .my-btns .my-btn.btn2:hover {
+    background-color: var(--main-black);
+    color: white;
+}
+
+.about-me .container .row .photo-content img {
+    width: 100%;
+}
+
+.about-me .container .row .photo-content {
+    position: relative;
+}
+
+.about-me .container .row .photo-content::after {
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: -30px;
+    height: 100%;
+    width: 100%;
+    background-image: url(../images/dots.png);
+    background-position: center center;
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+
+
+.services {
+    background-color: #f7f7f7;
+}
+
+.services .title h3 {
+    display: inline;
+    position: relative;
+    z-index: 2;
+}
+
+.services .title h3::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    height: 80%;
+    width: 100%;
+    background-image: url(../images/dots.png);
+    background-position: center center;
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+
+
+.services .cards .my-card {
+    padding: 30px 20px;
+    background: #fff;
+    -webkit-box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    border-radius: 5px;
+    border-width: 0;
+}
+
+
+.services .cards .my-card .icon {
+    text-align: center;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s;
+}
+
+.services .cards .my-card .icon i {
+    font-size: 32px;
+    transition: all 0.4s;
+    color: var(--main-text-black);
+}
+
+.services .cards .my-card:hover i {
+    color: white;
+}
+
+.services .cards .my-card:hover .icon {
+    background-color: var(--main-black);
+}
+
+.services .cards .card-body p {
+    word-spacing: 2px;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+    
+}
+
+
+
+
+
+.works .title h3 {
+    display: inline;
+    position: relative;
+    z-index: 2;
+}
+
+.works .title h3::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    height: 80%;
+    width: 100%;
+    background-image: url(../images/dots.png);
+    background-position: center center;
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+
+.nav-and-tabs button.my-tab-button {
+    color: var(--main-text-black);
+    font-family: pop-extrabold;
+}
+
+.nav-and-tabs button.active {
+    color: var(--main-text-black) !important;
+    position: relative;
+    transition: all 0.5s;
+}
+
+.nav-and-tabs button.active::after {
+    content: "";
+    width: 80%;
+    height: 2px;
+    background-color: var(--main-black);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.4s;
+}
+
+
+.nav-and-tabs .card .my-overlay h5 {
+    font-size: 15px;
+}
+
+
+.nav-and-tabs .my-card {
+    position: relative !important;
+
+}
+
+.nav-and-tabs .card .my-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    background: rgba(255, 255, 255, 0.95);
+    opacity: 0;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    z-index: 2;
+    height: 90%;
+}
+
+.nav-and-tabs .card:hover .my-overlay {
+    top: 50%;
+    opacity: 100%;
+}
+
+
+.nav-and-tabs .card .my-overlay .title {
+    position: relative;
+    bottom: 40px;
+    transition: all 0.5s;
+}
+
+.nav-and-tabs .card:hover .my-overlay .title {
+    bottom: 5px;
+}
+
+.nav-and-tabs .card .my-overlay .icon {
+    position: relative;
+    transition: all 0.5s;
+    top: 35px;
+}
+
+.nav-and-tabs .card:hover .my-overlay .icon {
+    top: 5px;
+}
+
+.nav-and-tabs .card .my-overlay .icon .ico {
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-black);
+    height: 30PX;
+    width: 30px;
+    border-radius: 50%;
+    transition: all 0.4s;
+    border: 1px solid var(--main-text-black);
+}
+.nav-and-tabs .card .my-overlay .icon .ico:hover
+{
+    background-color: white
+}
+.nav-and-tabs .card .my-overlay .icon .ico:hover i{
+    color:var(--main-text-black)
+}
+
+
+
+.clients {
+    background-color: #f7f7f7;
+}
+
+.clients .title h3 {
+    display: inline;
+    position: relative;
+    z-index: 2;
+}
+
+.clients .title h3::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    height: 80%;
+    width: 100%;
+    background-image: url(../images/dots.png);
+    background-position: center center;
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+.clients .container .row .testimonial .photo{
+    height: 90px;
+    width: 90px;
+}
+
+.clients .container .row .testimonial .description p {
+    word-spacing: 2px;
+    line-height: 1.6;
+    margin: 0;
+    font-size: 15px;
+    
+
+}
+
+.clients .container .row .testimonial .carousel-indicators
+{
+    top: 105%;
+}
+.clients .container .row .testimonial .carousel-indicators .my-btn
+{
+    background-color: #aeaeae;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    opacity: 100%;
+    margin: 0 10px;
+}
+.clients .container .row .testimonial .carousel-indicators .my-btn:hover
+{
+    background-color: #779389;
+}
+.clients .container .row .testimonial .carousel-indicators .active.my-btn
+{
+    background-color: #779389;
+}
+
+
+
+
+.counter .single-counter .icon i{
+    font-size: 35px;
+    color: var(--main-text-black);
+} 
+
+
+
+
+
+.team {
+    background-color: #f7f7f7;
+}
+
+.team .title h3 {
+    display: inline;
+    position: relative;
+    z-index: 2;
+}
+
+.team .title h3::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    height: 80%;
+    width: 100%;
+    background-image: url(../images/dots.png);
+    background-position: center center;
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+
+
+
+.team .my-card {
+    padding: 30px 20px;
+    background: #fff;
+    -webkit-box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    border-radius: 5px;
+    border-width: 0;
+}
+
+
 
 
 
